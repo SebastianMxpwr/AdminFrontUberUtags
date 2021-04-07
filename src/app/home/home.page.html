@@ -1,0 +1,109 @@
+<ion-content [fullscreen]="true">
+  <div id="header">
+    <div class="titulo">
+      <h1>Registar Pasajeros</h1>
+    </div>
+    <div class="form-register">
+      <div class="formulario">
+        <form #frmRegisterP="ngForm" (ngSubmit)="onRegisterP(frmRegisterP)">
+          <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input type="text" name="strNombre" placeholder="Danos tu nombre" ngModel required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Correo</ion-label>
+            <ion-input type="text" name="strEmail" placeholder="Danos tu correo" ngModel required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password" name="strPassword" placeholder="Escribe tu contraseña" ngModel required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Celular</ion-label>
+            <ion-input type="number" name="nmbCelular" placeholder="Escribe un telefono celular" ngModel required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Curp O Rfc</ion-label>
+            <ion-input type="text" name="strRfcCurp" placeholder="Rfc o Curp" ngModel required></ion-input>
+          </ion-item>
+  
+          <ion-button type="submit" class="regis">Agreagr pasajero!</ion-button>
+        </form>
+      </div> 
+    </div>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Celular</th>
+            <th>Curp/Rfc</th>
+          </tr>
+        </thead>
+        <tbody class="tbl-content">
+          <tr *ngFor= "let pasajero of admin.pasajeros" >
+            <td>{{pasajero.strNombre}}</td>
+            <td>{{pasajero.strEmail}}</td>
+            <td>{{pasajero.nmbCelular}}</td>
+            <td>{{pasajero.strRfcCurp}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="titulo">
+      <h1>Registar conductores</h1>
+    </div>
+    <div class="form-register">
+      <div class="formulario">
+        <form #frmRegisterC="ngForm" (ngSubmit)="onRegisterC(frmRegisterC)">
+          <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input type="text" name="strNombre" placeholder="Danos tu nombre" ngModel required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Correo</ion-label>
+            <ion-input type="text" name="strEmail" placeholder="Danos tu correo" ngModel required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password" name="strPassword" placeholder="Escribe tu contraseña" ngModel required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Celular</ion-label>
+            <ion-input type="number" name="nmbCelular" placeholder="Escribe un telefono celular" ngModel required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Curp O Rfc</ion-label>
+            <ion-input type="text" name="strRfcCurp" placeholder="Rfc o Curp" ngModel required></ion-input>
+          </ion-item>
+    
+          <ion-button type="submit" class="regis">Agregar conductor!</ion-button>
+        </form>
+      </div>
+    </div>
+
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Celular</th>
+            <th>Curp/Rfc</th>
+          </tr>
+        </thead>
+        <tbody class="tbl-content">
+          <tr *ngFor= "let conductor of admin.conductores" >
+            <td>{{conductor.strNombre}}</td>
+            <td>{{conductor.strEmail}}</td>
+            <td>{{conductor.nmbCelular}}</td>
+            <td>{{conductor.strRfcCurp}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+</ion-content>

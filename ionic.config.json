@@ -1,0 +1,7 @@
+{
+  "name": "AdminFront",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,21 @@
+<ion-content>
+  <div id="form-login">
+    <div id="header">
+        <h1>Login</h1>
+        <h3>Parece que tu eres el admin...</h3>
+    </div>
+    <div id="formulario">
+        <form #frmloginr="ngForm" (ngSubmit)="onLogin(frmloginr)">
+        <ion-item>
+            <ion-label position="floating">Correo</ion-label>
+            <ion-input type="text" name="strEmail" placeholder="Danos tu correo" ngModel required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password" name="strPassword" placeholder="Escribe tu contraseña" ngModel required></ion-input>
+        </ion-item>
+        <ion-button type="submit" id="regis">Logearse!</ion-button>
+        </form>
+    </div>
+</div>
+</ion-content>
